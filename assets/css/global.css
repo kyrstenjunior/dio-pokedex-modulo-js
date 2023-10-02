@@ -1,3 +1,24 @@
+:root{
+  --normal: #a6a877;
+  --grass: #77c850;
+  --fire: #ee7f20;
+  --water: #678fee;
+  --electric: #f7cf2e;
+  --ice: #98d5d7;
+  --ground: #dfbf69;
+  --flying: #a98ff0;
+  --poison: #a040a0;
+  --fighting: #bf3029;
+  --psychic: #f65687;
+  --dark: #725847;
+  --rock: #b8a137;
+  --bug: #a8b720;
+  --ghost: #6e5896;
+  --steel: #b9b7cf;
+  --dragon: #6f38f6;
+  --fairy: #f9aec7;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -46,27 +67,36 @@ h1{
   display: flex;
   justify-content: space-between;
   color: #fff;
-  background-color: #46D1B1;
   border-radius: 16px;
   padding: 20px;
+  position: relative;
 }
 
 .grid .card h2{
   font-size: 16px;
   margin-top: 12px;
+  text-transform: capitalize;
+}
+
+.grid .card .number{
+  font-size: 13px;
+  position: absolute;
+  right: 12px;
+  top: 12px;
 }
 
 .grid .card .types{
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-transform: capitalize;
 }
 
 .grid .card .types span{
   font-size: 14px;
-  background-color: #61E2CB;
   padding: 4px 8px;
   border-radius: 20px;
+  filter: brightness(1.2);
 }
 
 .grid .card .types span:nth-child(1){
@@ -76,9 +106,29 @@ h1{
 
 .grid .card img{
   max-width: 92px;
-  width: 100%;
+  width: 35%;
   align-self: flex-end;
   transform: scaleX(-1);
+}
+
+.pagination{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.pagination button{
+  background-color: #808080;
+  color: #fff;
+  border: none;
+  padding: 6px 8px;
+  cursor: pointer;
+  transition: .4s;
+}
+
+.pagination button:hover{
+  color: #000;
 }
 
 @media screen and (max-width: 718px){
